@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<qserver class="org.jpos.q2.iso.QServer" name="isodummyserver" logger="Q2" 
+realm="isodummyserver">
+    <attr name="port" type="java.lang.Integer">1121</attr>
+    <channel realm="server-channel" logger="Q2" class="org.jpos.iso.channel.ASCIIChannel" 
+        packager="org.jpos.iso.packager.ISO87APackager">
+        <!--
+    You can set your packager config xml by:
+        <property name="packager-config" value="path/to/your/packager.xml" /> 
+    -->
+    </channel>
+    <request-listener class="com.obulex.jpos.service.Server" logger="Q2"  
+    realm="request-listener">
+    </request-listener>
+    <in>serverchannel-in</in>
+    <out>serverchannel-out</out>
+</qserver>
