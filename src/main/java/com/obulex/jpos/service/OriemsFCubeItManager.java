@@ -63,7 +63,7 @@ public class OriemsFCubeItManager extends QBeanSupport{
 			 m.set(4,ISOCurrency.convertToIsoMsg(0,
 					 ISOCurrency.getIsoCodeFromAlphaCode(cfg.get("default-currency"))));
 			 m.set(7, ISODate.getDateTime(date));
-			 m.set(11, ISOUtil.zeropad (Long.toString (traceNumber), 6)); // TraceNumber
+			 m.set(11, ISOUtil.zeropad (Long.toString (traceNumber), 6)); // STAN
 			 m.set(12,ISODate.getTime(date,
 					 TimeZone.getTimeZone("Africa/Nairobi")));
 			 m.set(13,ISODate.getDate(date,
@@ -74,6 +74,7 @@ public class OriemsFCubeItManager extends QBeanSupport{
 			 m.set(41,cfg.get("terminal-id"));
 			 m.set(43,cfg.get("our-address"));
 			 m.set(49,ISOCurrency.getIsoCodeFromAlphaCode(cfg.get("default-currency")));
+			 m.set(61, cfg.get("network-id"));
 			 m.set(102,fromAccount);
 		 } catch (ISOException e) {
 			log.warn(e.fillInStackTrace());
@@ -88,15 +89,11 @@ public class OriemsFCubeItManager extends QBeanSupport{
 		 long traceNumber = SpaceUtil.nextLong(psp, TRACE) % 100000;
 		 Date date = new Date();
 		 try {
-			 String track2Data = ISOUtil.padright(cfg.get("our-id"),16, '9') +
-					 "=2007501";
 			 m.setMTI("0200");
 			 m.set(2,ISOUtil.padright(cfg.get("our-id"),16, '9'));
 			 m.set(3, ISOUtil.padright("42",6, '0'));
 			 m.set(4, ISOCurrency.convertToIsoMsg(amount,
 					 ISOCurrency.getIsoCodeFromAlphaCode(cfg.get("default-currency"))));
-			 /**m.set(6, ISOCurrency.convertToIsoMsg(billingAmount,
-					 ISOCurrency.getIsoCodeFromAlphaCode(cfg.get("default-currency"))));**/
 			 m.set(7, ISODate.getDateTime(date));
 			 m.set(11, ISOUtil.zeropad (Long.toString (traceNumber), 6));
 			 m.set(12,ISODate.getTime(date,
@@ -110,16 +107,15 @@ public class OriemsFCubeItManager extends QBeanSupport{
 			 m.set(28, ISOUtil.padright("C",9, '0'));
 			 m.set(32,cfg.get("our-id"));
 			 m.set(33,cfg.get("our-id"));
-			 m.set(35, ISOUtil.padright(track2Data,29, '0'));
 			 m.set(37,ISOUtil.padleft(Long.toString (traceNumber), 12, '0'));
 			 m.set(41,cfg.get("terminal-id"));
 			 m.set(42,cfg.get("our-id") + "000000006");
 			 m.set(43,cfg.get("our-address"));
 			 m.set(49,ISOCurrency.getIsoCodeFromAlphaCode(cfg.get("default-currency")));
-			 m.set(60, ISOUtil.padright("27",12, ' '));
+			 m.set(60, "27          ");
+			 m.set(61, cfg.get("network-id"));
 			 m.set(102,fromAccount);
 			 m.set(103,toAccount);
-
 		 } catch (ISOException e) {
 			log.warn(e.fillInStackTrace());
 		 }
@@ -164,6 +160,7 @@ public class OriemsFCubeItManager extends QBeanSupport{
 			 m.setMTI("0800");
 			 m.set (7, ISODate.getDateTime(date));
 			 m.set (11, ISOUtil.zeropad (Long.toString (traceNumber), 6));
+			 m.set(61, cfg.get("network-id"));
 			 m.set(70, ISOUtil.zeropad(1, 3));
 		 } catch (ISOException e) {
 			 e.printStackTrace();
@@ -216,12 +213,13 @@ public class OriemsFCubeItManager extends QBeanSupport{
 							 .getIfExists(FCUBEIT + readyKey);
 					 if(registered.equals(true))
 					 {
+
 						 log.info("Balance Inquiry for test trust account");
 						 doBalanceInquiry(cfg.get("test-trust-account"));
 						 log.info("Balance Inquiry for test collection account");
 						 doBalanceInquiry(cfg.get("test-collection-account"));
 						 doFundsTransfer(cfg.get("test-trust-account"),
-								 cfg.get("test-collection-account"), 100, 0);
+								 cfg.get("test-collection-account"), 1000, 0);
 						 log.info("Balance Inquiry for test trust account");
 						 doBalanceInquiry(cfg.get("test-trust-account"));
 						 log.info("Balance Inquiry for test collection account");
