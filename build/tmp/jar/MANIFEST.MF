@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Implementation-Title: chasemw
+Implementation-Version: 0.02
+Main-Class: org.jpos.q2.Q2
+Class-Path: lib/jpos-2.0.5-SNAPSHOT.jar lib/jposee-db-postgresql-2.1.1
+ -SNAPSHOT.jar lib/jdbm-1.0.jar lib/javatuples-1.2.jar lib/bsh-2.0b5.j
+ ar lib/bcpg-jdk15on-1.52.jar lib/jdom-1.1.3.jar lib/je-5.0.73.jar lib
+ /org.osgi.core-6.0.0.jar lib/bcprov-jdk15on-1.52.jar lib/jline-1.0.ja
+ r lib/xercesImpl-2.11.0.jar lib/commons-cli-1.3.1.jar lib/jposee-dbsu
+ pport-2.1.1-SNAPSHOT.jar lib/postgresql-9.4-1202-jdbc42.jar lib/xml-a
+ pis-1.4.01.jar lib/hibernate-core-5.0.2.Final.jar lib/jackson-databin
+ d-2.4.5.jar lib/hibernate-envers-5.0.2.Final.jar lib/hibernate-ehcach
+ e-5.0.2.Final.jar lib/jposee-core-2.1.1-SNAPSHOT.jar lib/hibernate-c3
+ p0-5.0.2.Final.jar lib/jboss-logging-3.3.0.Final.jar lib/geronimo-jta
+ _1.1_spec-1.1.1.jar lib/hibernate-jpa-2.1-api-1.0.0.Final.jar lib/jav
+ assist-3.18.1-GA.jar lib/antlr-2.7.7.jar lib/jandex-1.2.2.Final.jar l
+ ib/dom4j-1.6.1.jar lib/hibernate-commons-annotations-5.0.0.Final.jar 
+ lib/jackson-annotations-2.4.0.jar lib/jackson-core-2.4.5.jar lib/hibe
+ rnate-entitymanager-5.0.2.Final.jar lib/ehcache-core-2.4.3.jar lib/co
+ mmons-beanutils-1.9.2.jar lib/commons-lang3-3.4.jar lib/joda-time-2.8
+ .jar lib/c3p0-0.9.2.1.jar lib/slf4j-api-1.6.1.jar lib/commons-logging
+ -1.1.1.jar lib/commons-collections-3.2.1.jar lib/mchange-commons-java
+ -0.2.3.4.jar
+

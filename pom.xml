@@ -5,19 +5,15 @@
     <parent>
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-parent</artifactId>
-    	<version>1.2.5.RELEASE</version>
+    	<version>1.3.2.RELEASE</version>
     </parent>
     <properties>
     	<java.version>1.7</java.version>
-    	<postgresql.version>9.3-1100-jdbc41</postgresql.version>
-    	<jpos.version>1.9.6</jpos.version>
-    	<jaxb-api.version>2.2.12</jaxb-api.version>
-    	<ojdbc14.version>10.2.0.4.0</ojdbc14.version>
-    	<jaxb-impl.version>2.2.11</jaxb-impl.version>
+    	<postgresql.version>9.4-1201-jdbc41</postgresql.version>
+    	<jpos.version>2.0.4</jpos.version>
     </properties>
     <groupId>com.obulex</groupId>
-    <artifactId>oriems-flexcube-integration</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
      <build>
 	   <plugins>
 	     <plugin>
@@ -74,28 +70,12 @@
     		<artifactId>spring-boot-starter-data-jpa</artifactId>
     	</dependency>
     	<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-actuator</artifactId>
-    	</dependency>
-    	<dependency>
     		<groupId>org.jpos</groupId>
     		<artifactId>jpos</artifactId>
     		</dependency>
     	<dependency>
     		<groupId>org.postgresql</groupId>
     		<artifactId>postgresql</artifactId>
-    	</dependency>
-    	<dependency>
-    		<groupId>javax.xml.bind</groupId>
-    		<artifactId>jaxb-api</artifactId>
-    	</dependency>
-    	<dependency>
-    		<groupId>com.sun.xml.bind</groupId>
-    		<artifactId>jaxb-impl</artifactId>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.apache.commons</groupId>
-    		<artifactId>commons-lang3</artifactId>
     	</dependency>
     </dependencies>
     <dependencyManagement>
@@ -110,21 +90,7 @@
     			<artifactId>postgresql</artifactId>
     			<version>${postgresql.version}</version>
     		</dependency>
-    		<dependency>
-    			<groupId>javax.xml.bind</groupId>
-    			<artifactId>jaxb-api</artifactId>
-    			<version>${jaxb-api.version}</version>
-    		</dependency>
-    		<dependency>
-    			<groupId>com.sun.xml.bind</groupId>
-    			<artifactId>jaxb-impl</artifactId>
-    			<version>${jaxb-impl.version}</version>
-    		</dependency>
-    		<dependency>
-    			<groupId>org.apache.commons</groupId>
-    			<artifactId>commons-lang3</artifactId>
-    			<version>3.4</version>
-    		</dependency>
     	</dependencies>
     </dependencyManagement>
+    <artifactId>chase-mw</artifactId>
 </project>

@@ -1,0 +1,12 @@
+com.obulex.domain.evolve
+com.obulex.domain.interfaces
+com.obulex.domain.jpos.custom.interfaces
+com.obulex.domain.jpos.interfaces
+com.obulex.jpos
+com.obulex.jpos.config
+com.obulex.jpos.custom.service
+com.obulex.jpos.interfaces
+com.obulex.jpos.interfaces.domain
+com.obulex.jpos.service
+com.obulex.jpos.test
+com.obulex.util

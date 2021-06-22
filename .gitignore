@@ -38,5 +38,11 @@ _svn
 svn-commit*.tmp
 logs
 *.gz
-/target/
-/bin/
+/target
+/bin
+/.settings
+.log
+/.idea
+/build
+/.gradle
+.project

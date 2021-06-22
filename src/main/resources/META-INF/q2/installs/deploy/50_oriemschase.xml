@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<oriemschase-mgr class="com.obulex.jpos.service.ProcessManager" logger="Q2"
+name="oriemschase-mgr">
+    <property file="cfg/oriems-config.cfg" />
+</oriemschase-mgr>

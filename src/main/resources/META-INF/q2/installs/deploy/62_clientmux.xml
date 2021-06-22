@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="62_clientmux">
+<in>oriems-chase-receive</in>
+<out>oriems-chase-send</out>
+<ready>oriems-chase-adaptor.ready</ready>
+<unhandled>oriems-chase-unhandled</unhandled>
+</mux>

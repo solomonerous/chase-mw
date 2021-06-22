@@ -1,0 +1,6 @@
+<module name="chase">
+    <mappings>
+        <mapping class="com.obulex.domain.evolve.MiddlewareRequest"/>
+        <mapping class="com.obulex.domain.evolve.MiddlewareTransaction"/>
+    </mappings>
+</module>

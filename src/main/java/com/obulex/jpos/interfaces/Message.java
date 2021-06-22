@@ -7,7 +7,7 @@ public interface Message {
 	 *
 	 */
 	public enum MessageType {
-		ETWORK,FINANCIAL;
+		NETWORK,FINANCIAL;
 	}
 
 	/**
