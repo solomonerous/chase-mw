@@ -7,6 +7,6 @@
  </channel>
  <in>oriems-chase-send</in>
  <out>oriems-chase-receive</out>
- <ready>oriems-chase-adaptor.ready</ready>
+ <ready>chase-adaptor.ready</ready>
  <reconnect-delay>10000</reconnect-delay>
 </channel-adaptor>
